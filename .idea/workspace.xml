@@ -4,11 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbd7b7be-e2dc-4f52-8525-91310c846cd9" name="Changes" comment="Setter Injection">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/service/CompanyService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/properties.properties" afterDir="false" />
+    <list default="true" id="bbd7b7be-e2dc-4f52-8525-91310c846cd9" name="Changes" comment="Injection properties.properties">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/bfpp/LogBeanFactoryPostProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/bfpp/VerifyPropertyBeanFactoryPostProcessor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/database/pool/ConnectionPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/database/pool/ConnectionPool.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -92,6 +91,7 @@
       <recent name="org.alexsandrov.spring.database.repository" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.alexsandrov.spring.bfpp" />
       <recent name="org.alexsandrov.spring.database.repository" />
     </key>
   </component>
@@ -145,7 +145,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1682844286800</updated>
-      <workItem from="1682844287965" duration="12871000" />
+      <workItem from="1682844287965" duration="14184000" />
     </task>
     <task id="LOCAL-00001" summary="New commit">
       <created>1682845537736</created>
@@ -175,7 +175,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682859053646</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Injection properties.properties">
+      <created>1682866623923</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1682866623923</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -197,7 +204,8 @@
     <MESSAGE value="Constructor Injection" />
     <MESSAGE value="Constructor Injection 1" />
     <MESSAGE value="Setter Injection" />
-    <option name="LAST_COMMIT_MESSAGE" value="Setter Injection" />
+    <MESSAGE value="Injection properties.properties" />
+    <option name="LAST_COMMIT_MESSAGE" value="Injection properties.properties" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -206,6 +214,16 @@
           <url>file://$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/ApplicationRunner.java</url>
           <line>13</line>
           <option name="timeStamp" value="4" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/bfpp/VerifyPropertyBeanFactoryPostProcessor.java</url>
+          <line>12</line>
+          <option name="timeStamp" value="5" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/bfpp/LogBeanFactoryPostProcessor.java</url>
+          <line>11</line>
+          <option name="timeStamp" value="6" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

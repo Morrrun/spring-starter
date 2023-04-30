@@ -4,6 +4,10 @@
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 <context:property-placeholder location="classpath:properties.properties"/>
+
+    <bean class="org.alexsandrov.spring.bfpp.LogBeanFactoryPostProcessor"/>
+    <bean class="org.alexsandrov.spring.bfpp.VerifyPropertyBeanFactoryPostProcessor"/>
+
     <bean id="pool1" name="p1,p2,p3" class="org.alexsandrov.spring.database.pool.ConnectionPool"
           init-method="init" scope="singleton">
         <constructor-arg index="0" type="java.lang.String" value="postgres"/>

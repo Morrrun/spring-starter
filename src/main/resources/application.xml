@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
-
-    <bean id="pool1" name="p1,p2,p3" class="org.alexsandrov.spring.database.pool.ConnectionPool">
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+<context:property-placeholder location="classpath:properties.properties"/>
+    <bean id="pool1" name="p1,p2,p3" class="org.alexsandrov.spring.database.pool.ConnectionPool"
+          init-method="init" scope="singleton">
         <constructor-arg index="0" type="java.lang.String" value="postgres"/>
         <constructor-arg index="1" type="java.lang.Integer" value="10"/>
         <constructor-arg index="2" type="java.util.List">
@@ -20,7 +22,8 @@
         </property>
     </bean>
 
-    <bean name="companyRepository" class="org.alexsandrov.spring.database.repository.CompanyRepository" factory-method="of">
+    <bean name="companyRepository" class="org.alexsandrov.spring.database.repository.CompanyRepository"
+          factory-method="of">
         <constructor-arg ref="pool1"/>
     </bean>
 </beans>

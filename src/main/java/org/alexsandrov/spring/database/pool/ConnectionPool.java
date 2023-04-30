@@ -1,5 +1,7 @@
 package org.alexsandrov.spring.database.pool;
 
+import org.springframework.beans.factory.DisposableBean;
+
 import java.util.List;
 import java.util.Map;
 
@@ -20,4 +22,9 @@ public class ConnectionPool {
     public void setProperties(Map<String, Object> properties) {
         this.properties = properties;
     }
+
+    private void init() {
+        System.out.println("Init connection pool");
+    }
+
 }

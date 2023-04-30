@@ -12,12 +12,12 @@
                 <value>--arg1=value2</value>
             </list>
         </constructor-arg>
-        <constructor-arg index="3" type="java.util.Map">
+        <property name="properties">
             <map>
                 <entry key="url" value="postgres"/>
                 <entry key="password" value="12345"/>
             </map>
-        </constructor-arg>
+        </property>
     </bean>
 
     <bean name="companyRepository" class="org.alexsandrov.spring.database.repository.CompanyRepository" factory-method="of">

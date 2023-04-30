@@ -19,4 +19,8 @@
             </map>
         </constructor-arg>
     </bean>
+
+    <bean name="companyRepository" class="org.alexsandrov.spring.database.repository.CompanyRepository" factory-method="of">
+        <constructor-arg ref="pool1"/>
+    </bean>
 </beans>

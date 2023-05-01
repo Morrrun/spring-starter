@@ -1,5 +1,7 @@
 package org.alexsandrov.spring.database.pool;
 
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
 import org.springframework.beans.factory.DisposableBean;
 
 import java.util.List;
@@ -23,8 +25,14 @@ public class ConnectionPool {
         this.properties = properties;
     }
 
+    @PostConstruct
     private void init() {
         System.out.println("Init connection pool");
+    }
+
+    @PreDestroy
+    private void destroy() {
+
     }
 
 }

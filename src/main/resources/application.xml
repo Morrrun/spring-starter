@@ -9,7 +9,7 @@
     <bean class="org.alexsandrov.spring.bfpp.VerifyPropertyBeanFactoryPostProcessor"/>
 
     <bean id="pool1" name="p1,p2,p3" class="org.alexsandrov.spring.database.pool.ConnectionPool"
-          init-method="init" scope="singleton">
+          scope="singleton">
         <constructor-arg index="0" type="java.lang.String" value="postgres"/>
         <constructor-arg index="1" type="java.lang.Integer" value="10"/>
         <constructor-arg index="2" type="java.util.List">
@@ -20,8 +20,8 @@
         </constructor-arg>
         <property name="properties">
             <map>
-                <entry key="url" value="postgres"/>
-                <entry key="password" value="12345"/>
+                <entry key="url" value="${db.url}"/>
+                <entry key="password" value="${db.password}"/>
             </map>
         </property>
     </bean>

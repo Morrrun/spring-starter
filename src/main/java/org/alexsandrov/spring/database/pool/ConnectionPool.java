@@ -2,33 +2,24 @@ package org.alexsandrov.spring.database.pool;
 
 import jakarta.annotation.PostConstruct;
 import jakarta.annotation.PreDestroy;
-import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.stereotype.Component;
 
-import java.util.List;
-import java.util.Map;
-
-
+@Component("pool1")
 public class ConnectionPool {
-    private String username;
+    private final String username;
 
-    private Integer poolSize;
-    private List<Object> args;
-    private Map<String, Object> properties;
+    private final Integer poolSize;
 
 
-    public ConnectionPool() {
-    }
-
-    public ConnectionPool(String username, Integer poolSize,
-                          List<Object> args) {
+    @Autowired
+    public ConnectionPool(@Value("${db.username}") String username,
+                          @Value("${db.pool.size}") Integer poolSize) {
         this.username = username;
         this.poolSize = poolSize;
-        this.args = args;
     }
 
-    public void setProperties(Map<String, Object> properties) {
-        this.properties = properties;
-    }
 
     @PostConstruct
     private void init() {

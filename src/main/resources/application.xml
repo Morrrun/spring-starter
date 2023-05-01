@@ -3,32 +3,10 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:context="http://www.springframework.org/schema/context"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
-<context:property-placeholder location="classpath:properties.properties"/>
+<!--<context:property-placeholder location="classpath:properties.properties"/>-->
+<context:component-scan base-package="org.alexsandrov.spring"/>
 
-<!--    <bean class="org.alexsandrov.spring.bfpp.LogBeanFactoryPostProcessor"/>-->
-<!--    <bean class="org.alexsandrov.spring.bfpp.VerifyPropertyBeanFactoryPostProcessor"/>-->
 
-    <bean class="org.alexsandrov.spring.bpp.InjectBeanPostProcessor"/>
-    <bean class="org.alexsandrov.spring.bpp.TransactionBeanPostProcessor"/>
-    <bean class="org.alexsandrov.spring.bpp.AuditingBeanPostProcessor"/>
-
-    <bean id="pool2" class="org.alexsandrov.spring.database.pool.ConnectionPool"/>
-    <bean id="pool1" name="p1,p2,p3" class="org.alexsandrov.spring.database.pool.ConnectionPool">
-        <constructor-arg index="0" type="java.lang.String" value="postgres"/>
-        <constructor-arg index="1" type="java.lang.Integer" value="10"/>
-        <constructor-arg index="2" type="java.util.List">
-            <list>
-                <value>--arg1=value1</value>
-                <value>--arg1=value2</value>
-            </list>
-        </constructor-arg>
-        <property name="properties">
-            <map>
-                <entry key="url" value="${db.url}"/>
-                <entry key="password" value="${db.password}"/>
-            </map>
-        </property>
-    </bean>
 
     <bean name="companyRepository" class="org.alexsandrov.spring.database.repository.CompanyRepository"/>
 

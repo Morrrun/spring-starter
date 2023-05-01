@@ -3,6 +3,7 @@ package org.alexsandrov.spring;
 import org.alexsandrov.spring.database.pool.ConnectionPool;
 
 import org.alexsandrov.spring.database.repository.CompanyRepository;
+import org.alexsandrov.spring.database.repository.CrudRepository;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class ApplicationRunner {
@@ -11,8 +12,8 @@ public class ApplicationRunner {
             var connectionPool = context.getBean("pool1", ConnectionPool.class);
             System.out.println(connectionPool);
 
-            var companyRepository = context.getBean("companyRepository", CompanyRepository.class);
-            System.out.println(companyRepository);
+            var companyRepository = context.getBean("companyRepository", CrudRepository.class);
+            System.out.println(companyRepository.findById(1));
         }
     }
 }

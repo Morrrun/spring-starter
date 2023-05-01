@@ -5,9 +5,12 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
 <context:property-placeholder location="classpath:properties.properties"/>
 
-    <bean class="org.alexsandrov.spring.bfpp.LogBeanFactoryPostProcessor"/>
-    <bean class="org.alexsandrov.spring.bfpp.VerifyPropertyBeanFactoryPostProcessor"/>
+<!--    <bean class="org.alexsandrov.spring.bfpp.LogBeanFactoryPostProcessor"/>-->
+<!--    <bean class="org.alexsandrov.spring.bfpp.VerifyPropertyBeanFactoryPostProcessor"/>-->
+
     <bean class="org.alexsandrov.spring.bpp.InjectBeanPostProcessor"/>
+    <bean class="org.alexsandrov.spring.bpp.TransactionBeanPostProcessor"/>
+    <bean class="org.alexsandrov.spring.bpp.AuditingBeanPostProcessor"/>
 
     <bean id="pool1" name="p1,p2,p3" class="org.alexsandrov.spring.database.pool.ConnectionPool"
           scope="singleton">

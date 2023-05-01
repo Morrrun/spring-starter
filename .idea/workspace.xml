@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbd7b7be-e2dc-4f52-8525-91310c846cd9" name="Changes" comment="Commit">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/bpp/InjectBean.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/bpp/InjectBeanPostProcessor.java" afterDir="false" />
+    <list default="true" id="bbd7b7be-e2dc-4f52-8525-91310c846cd9" name="Changes" comment="BeanPostProcessor Before Initialization">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/bpp/Auditing.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/bpp/AuditingBeanPostProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/bpp/Transaction.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/bpp/TransactionBeanPostProcessor.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/database/entity/Company.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/database/repository/CrudRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/ApplicationRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/ApplicationRunner.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/database/repository/CompanyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/database/repository/CompanyRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.xml" afterDir="false" />
     </list>
@@ -57,6 +62,8 @@
       <list>
         <option value="spring-beans.schema" />
         <option value="AnnotationType" />
+        <option value="Interface" />
+        <option value="Record" />
         <option value="Class" />
       </list>
     </option>
@@ -94,6 +101,7 @@
       <recent name="org.alexsandrov.spring.database.repository" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="org.alexsandrov.spring.bpp" />
       <recent name="org.alexsandrov.spring.bfpp" />
       <recent name="org.alexsandrov.spring.database.repository" />
     </key>
@@ -148,7 +156,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1682844286800</updated>
-      <workItem from="1682844287965" duration="19767000" />
+      <workItem from="1682844287965" duration="22647000" />
     </task>
     <task id="LOCAL-00001" summary="New commit">
       <created>1682845537736</created>
@@ -199,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682920278141</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="BeanPostProcessor Before Initialization">
+      <created>1682921558140</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1682921558140</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -223,25 +238,16 @@
     <MESSAGE value="Setter Injection" />
     <MESSAGE value="Injection properties.properties" />
     <MESSAGE value="Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit" />
+    <MESSAGE value="BeanPostProcessor Before Initialization" />
+    <option name="LAST_COMMIT_MESSAGE" value="BeanPostProcessor Before Initialization" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/ApplicationRunner.java</url>
-          <line>13</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/bfpp/VerifyPropertyBeanFactoryPostProcessor.java</url>
-          <line>12</line>
-          <option name="timeStamp" value="5" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/bfpp/LogBeanFactoryPostProcessor.java</url>
-          <line>11</line>
-          <option name="timeStamp" value="6" />
+          <line>15</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

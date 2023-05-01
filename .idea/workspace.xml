@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbd7b7be-e2dc-4f52-8525-91310c846cd9" name="Changes" comment="Injection properties.properties">
+    <list default="true" id="bbd7b7be-e2dc-4f52-8525-91310c846cd9" name="Changes" comment="Commit">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/bpp/InjectBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/bpp/InjectBeanPostProcessor.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/database/pool/ConnectionPool.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/database/pool/ConnectionPool.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/database/repository/CompanyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/database/repository/CompanyRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -55,6 +56,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="spring-beans.schema" />
+        <option value="AnnotationType" />
         <option value="Class" />
       </list>
     </option>
@@ -87,6 +89,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+      <recent name="org.alexsandrov.spring.bpp" />
       <recent name="org.alexsandrov.spring.database.pool" />
       <recent name="org.alexsandrov.spring.database.repository" />
     </key>
@@ -145,7 +148,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1682844286800</updated>
-      <workItem from="1682844287965" duration="18857000" />
+      <workItem from="1682844287965" duration="19767000" />
     </task>
     <task id="LOCAL-00001" summary="New commit">
       <created>1682845537736</created>
@@ -189,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1682868383675</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Commit">
+      <created>1682920278141</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1682920278141</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -212,7 +222,8 @@
     <MESSAGE value="Constructor Injection 1" />
     <MESSAGE value="Setter Injection" />
     <MESSAGE value="Injection properties.properties" />
-    <option name="LAST_COMMIT_MESSAGE" value="Injection properties.properties" />
+    <MESSAGE value="Commit" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

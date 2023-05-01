@@ -7,6 +7,7 @@
 
     <bean class="org.alexsandrov.spring.bfpp.LogBeanFactoryPostProcessor"/>
     <bean class="org.alexsandrov.spring.bfpp.VerifyPropertyBeanFactoryPostProcessor"/>
+    <bean class="org.alexsandrov.spring.bpp.InjectBeanPostProcessor"/>
 
     <bean id="pool1" name="p1,p2,p3" class="org.alexsandrov.spring.database.pool.ConnectionPool"
           scope="singleton">
@@ -26,8 +27,6 @@
         </property>
     </bean>
 
-    <bean name="companyRepository" class="org.alexsandrov.spring.database.repository.CompanyRepository"
-          factory-method="of">
-        <constructor-arg ref="pool1"/>
-    </bean>
+    <bean name="companyRepository" class="org.alexsandrov.spring.database.repository.CompanyRepository"/>
+
 </beans>

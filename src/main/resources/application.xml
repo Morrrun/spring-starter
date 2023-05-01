@@ -12,8 +12,8 @@
     <bean class="org.alexsandrov.spring.bpp.TransactionBeanPostProcessor"/>
     <bean class="org.alexsandrov.spring.bpp.AuditingBeanPostProcessor"/>
 
-    <bean id="pool1" name="p1,p2,p3" class="org.alexsandrov.spring.database.pool.ConnectionPool"
-          scope="singleton">
+    <bean id="pool2" class="org.alexsandrov.spring.database.pool.ConnectionPool"/>
+    <bean id="pool1" name="p1,p2,p3" class="org.alexsandrov.spring.database.pool.ConnectionPool">
         <constructor-arg index="0" type="java.lang.String" value="postgres"/>
         <constructor-arg index="1" type="java.lang.Integer" value="10"/>
         <constructor-arg index="2" type="java.util.List">

@@ -4,9 +4,13 @@ db:
   driver: PostgresDriver
   url: postgres:5234
   hosts: localhost,127.0.0.1
+  properties:
+    first: 123
+    second: 567
+    third.value: Third
   pool:
     size: 12
-    timeout: 12
+    timeout: 10
   pools:
     - size: 1
       timeout: 1
@@ -14,4 +18,14 @@ db:
       timeout: 2
     - size: 3
       timeout: 3
-#spring.profiles.active: web
+spring.profiles.active: web
+
+
+logging:
+  level:
+    root: off
+    org.alexsandrov.spring.database.pool.ConnectionPool: info
+  file:
+    name: alexsandrov.log
+    #рутовая директория проекта
+    path: /

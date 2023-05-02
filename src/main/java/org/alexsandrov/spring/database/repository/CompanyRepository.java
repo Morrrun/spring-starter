@@ -2,6 +2,7 @@ package org.alexsandrov.spring.database.repository;
 
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.alexsandrov.spring.bpp.Auditing;
 import org.alexsandrov.spring.bpp.Transaction;
 import org.alexsandrov.spring.database.entity.Company;
@@ -15,6 +16,7 @@ import javax.annotation.PostConstruct;
 import java.util.List;
 import java.util.Optional;
 
+@Slf4j
 @Scope(BeanDefinition.SCOPE_PROTOTYPE)
 @Repository
 @Transaction
@@ -29,7 +31,7 @@ public class CompanyRepository implements CrudRepository<Integer, Company>{
 
     @PostConstruct
     private void init() {
-        System.out.println("init company repository");
+        log.info("Init company repository");;
     }
     @Override
     public Optional<Company> findById(Integer id) {
@@ -39,7 +41,7 @@ public class CompanyRepository implements CrudRepository<Integer, Company>{
 
     @Override
     public void delete(Company entity) {
-        System.out.println("delete method...");
+        log.info("delete method...");
     }
 
 }

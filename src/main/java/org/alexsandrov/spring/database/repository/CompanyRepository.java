@@ -1,47 +1,19 @@
 package org.alexsandrov.spring.database.repository;
 
-
-import lombok.RequiredArgsConstructor;
-import lombok.extern.slf4j.Slf4j;
-import org.alexsandrov.spring.bpp.Auditing;
-import org.alexsandrov.spring.bpp.Transaction;
 import org.alexsandrov.spring.database.entity.Company;
-import org.alexsandrov.spring.database.pool.ConnectionPool;
-import org.springframework.beans.factory.annotation.Value;
-import org.springframework.beans.factory.config.BeanDefinition;
-import org.springframework.context.annotation.Scope;
-import org.springframework.stereotype.Repository;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 
-import javax.annotation.PostConstruct;
 import java.util.List;
 import java.util.Optional;
 
-@Slf4j
-@Scope(BeanDefinition.SCOPE_PROTOTYPE)
-@Repository
-@Transaction
-@Auditing
-@RequiredArgsConstructor
-public class CompanyRepository implements CrudRepository<Integer, Company>{
-    private final ConnectionPool pool1;
-    private final List<ConnectionPool> pools;
-    @Value("25")
-    private final Integer poolSize;
+public interface CompanyRepository extends JpaRepository<Company, Integer> {
+    @Query("SELECT c FROM Company c " +
+           "JOIN fetch c.locales cl " +
+           "WHERE lower(c.name) = lower(:name2)")
+    Optional<Company> findByName(@Param("name2") String name);
 
-
-    @PostConstruct
-    private void init() {
-        log.info("Init company repository");;
-    }
-    @Override
-    public Optional<Company> findById(Integer id) {
-        System.out.println("findById method...");
-        return Optional.of(new Company(id));
-    }
-
-    @Override
-    public void delete(Company entity) {
-        log.info("delete method...");
-    }
+    List<Company> findAllByNameContainingIgnoreCase(String fragment);
 
 }

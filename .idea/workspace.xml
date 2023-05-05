@@ -4,39 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbd7b7be-e2dc-4f52-8525-91310c846cd9" name="Changes" comment="Integration Test">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alexsandrov.log.2023-05-04.0.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/database/entity/BaseEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/database/entity/Chat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/database/entity/Payment.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/database/entity/Role.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/database/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/database/entity/UserChat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/spring.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sql/data.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/sql/init.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/alexsandrov/spring/integration/TestApplicationRunner.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/alexsandrov/spring/integration/annotation/IntegrationTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/alexsandrov/spring/integration/database/repository/CompanyRepositoryIT.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/alexsandrov/spring/integration/database/repository/UserRepositoryIT.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/alexsandrov/spring/integration/service/UserServiceIT.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/application-test.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/spring.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/jpa-buddy.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
+    <list default="true" id="bbd7b7be-e2dc-4f52-8525-91310c846cd9" name="Changes" comment="JPA">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/bpp/TransactionBeanPostProcessor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/bpp/TransactionBeanPostProcessor.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/config/ApplicationConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/config/ApplicationConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/database/entity/Company.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/database/entity/Company.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/database/repository/CompanyRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/database/repository/CompanyRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/database/repository/CrudRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/database/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/database/entity/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/database/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/database/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/service/CompanyService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/service/CompanyService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/service/UserService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/alexsandrov/spring/integration/CompanyServiceIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/alexsandrov/spring/integration/service/CompanyServiceIT.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/alexsandrov/spring/service/CompanyServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/alexsandrov/spring/service/CompanyServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/alexsandrov/spring/integration/database/repository/UserRepositoryIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/alexsandrov/spring/integration/database/repository/UserRepositoryIT.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -186,8 +158,8 @@
       <recent name="org.alexsandrov.spring.database.repository" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.UserRepositoryIT.checkQueries">
-    <configuration name="CompanyRepositoryIT.checkFindByQueries" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.UserRepositoryIT.checkPageable">
+    <configuration name="CompanyRepositoryIT" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -200,7 +172,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.alexsandrov.spring.integration.database.repository.CompanyRepositoryIT.checkFindByQueries&quot;" />
+            <option value="&quot;org.alexsandrov.spring.integration.database.repository.CompanyRepositoryIT&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -210,7 +182,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="CompanyRepositoryIT.delete" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="UserRepositoryIT.checkFirstTop" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -223,7 +195,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.alexsandrov.spring.integration.database.repository.CompanyRepositoryIT.delete&quot;" />
+            <option value="&quot;org.alexsandrov.spring.integration.database.repository.UserRepositoryIT.checkFirstTop&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -233,7 +205,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="CompanyRepositoryIT.findById" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="UserRepositoryIT.checkPageable" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -246,7 +218,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.alexsandrov.spring.integration.database.repository.CompanyRepositoryIT.findById&quot;" />
+            <option value="&quot;org.alexsandrov.spring.integration.database.repository.UserRepositoryIT.checkPageable&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -256,7 +228,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="UserRepositoryIT.checkQueries" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="UserRepositoryIT.checkSort" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -269,7 +241,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.alexsandrov.spring.integration.database.repository.UserRepositoryIT.checkQueries&quot;" />
+            <option value="&quot;org.alexsandrov.spring.integration.database.repository.UserRepositoryIT.checkSort&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -279,23 +251,25 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="spring-starter [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="UserRepositoryIT.checkUpdate" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
+        <option name="scriptParameters" value="" />
         <option name="taskDescriptions">
           <list />
         </option>
         <option name="taskNames">
           <list>
-            <option value="clean" />
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.alexsandrov.spring.integration.database.repository.UserRepositoryIT.checkUpdate&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
       </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
       <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
@@ -320,21 +294,21 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Gradle.CompanyRepositoryIT.checkFindByQueries" />
-      <item itemvalue="Gradle.CompanyRepositoryIT.delete" />
-      <item itemvalue="Gradle.CompanyRepositoryIT.findById" />
-      <item itemvalue="Gradle.UserRepositoryIT.checkQueries" />
-      <item itemvalue="Gradle.spring-starter [clean]" />
+      <item itemvalue="Gradle.CompanyRepositoryIT" />
+      <item itemvalue="Gradle.UserRepositoryIT.checkFirstTop" />
+      <item itemvalue="Gradle.UserRepositoryIT.checkPageable" />
+      <item itemvalue="Gradle.UserRepositoryIT.checkSort" />
+      <item itemvalue="Gradle.UserRepositoryIT.checkUpdate" />
       <item itemvalue="JUnit.Repository" />
       <item itemvalue="Spring Boot.ApplicationRunner" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.UserRepositoryIT.checkQueries" />
-        <item itemvalue="Gradle.CompanyRepositoryIT.checkFindByQueries" />
-        <item itemvalue="Gradle.CompanyRepositoryIT.delete" />
-        <item itemvalue="Gradle.CompanyRepositoryIT.findById" />
-        <item itemvalue="Gradle.spring-starter [clean]" />
+        <item itemvalue="Gradle.UserRepositoryIT.checkPageable" />
+        <item itemvalue="Gradle.CompanyRepositoryIT" />
+        <item itemvalue="Gradle.UserRepositoryIT.checkSort" />
+        <item itemvalue="Gradle.UserRepositoryIT.checkFirstTop" />
+        <item itemvalue="Gradle.UserRepositoryIT.checkUpdate" />
       </list>
     </recent_temporary>
   </component>
@@ -351,7 +325,7 @@
       <updated>1682844286800</updated>
       <workItem from="1682844287965" duration="54587000" />
       <workItem from="1683113141564" duration="46000" />
-      <workItem from="1683190230667" duration="26367000" />
+      <workItem from="1683190230667" duration="37457000" />
     </task>
     <task id="LOCAL-00001" summary="New commit">
       <created>1682845537736</created>
@@ -451,7 +425,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683198080434</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="JPA">
+      <created>1683231171312</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1683231171312</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -482,7 +463,8 @@
     <MESSAGE value="SpringBoot" />
     <MESSAGE value="Logging" />
     <MESSAGE value="Integration Test" />
-    <option name="LAST_COMMIT_MESSAGE" value="Integration Test" />
+    <MESSAGE value="JPA" />
+    <option name="LAST_COMMIT_MESSAGE" value="JPA" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -499,8 +481,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/alexsandrov/spring/integration/service/CompanyServiceIT.java</url>
-          <line>31</line>
+          <line>28</line>
           <option name="timeStamp" value="43" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/alexsandrov/spring/integration/database/repository/UserRepositoryIT.java</url>
+          <line>30</line>
+          <option name="timeStamp" value="46" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

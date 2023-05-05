@@ -5,6 +5,7 @@ import org.alexsandrov.spring.database.entity.Role;
 import org.alexsandrov.spring.database.entity.User;
 import org.alexsandrov.spring.database.repository.UserRepository;
 import org.alexsandrov.spring.dto.PersonalInfo2;
+import org.alexsandrov.spring.dto.UserFilter;
 import org.alexsandrov.spring.integration.annotation.IntegrationTest;
 import org.junit.jupiter.api.Test;
 import org.springframework.data.domain.PageRequest;
@@ -23,6 +24,23 @@ import static org.junit.jupiter.api.Assertions.*;
 @RequiredArgsConstructor
 class UserRepositoryIT {
     private final UserRepository userRepository;
+
+
+    @Test
+    void checkAuditing() {
+        User ivan = userRepository.findById(1L).get();
+        ivan.setBirthDate(ivan.getBirthDate().plusYears(1L));
+        userRepository.flush();
+        System.out.println();
+    }
+
+    @Test
+    void checkCustomImplementation() {
+        UserFilter filter = new UserFilter(null, "%ov%", LocalDate.now());
+        List<User> users = userRepository.findAllByFilter(filter);
+//        assertThat(users).hasSize(2);
+        System.out.println();
+    }
 
     @Test
     void checkProjections() {

@@ -3,6 +3,7 @@ package org.alexsandrov.spring.database.repository;
 
 import org.alexsandrov.spring.database.entity.Role;
 import org.alexsandrov.spring.database.entity.User;
+import org.alexsandrov.spring.database.repository.custom.FilterUserRepository;
 import org.alexsandrov.spring.dto.PersonalInfo2;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -22,7 +23,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-public interface UserRepository extends JpaRepository<User, Long> {
+public interface UserRepository extends JpaRepository<User, Long>, FilterUserRepository {
     @Query("SELECT u " +
            "FROM User u " +
            "WHERE u.firstname like %:firstname% AND u.lastname like %:lastname%")

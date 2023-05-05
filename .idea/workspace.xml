@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbd7b7be-e2dc-4f52-8525-91310c846cd9" name="Changes" comment="Entity Graph">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/dto/PersonalInfo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/dto/PersonalInfo2.java" afterDir="false" />
+    <list default="true" id="bbd7b7be-e2dc-4f52-8525-91310c846cd9" name="Changes" comment="Projection">
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/config/AuditConfiguration.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/database/entity/AuditingEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/database/repository/custom/FilterUserRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/database/repository/custom/FilterUserRepositoryImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/dto/UserFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sql/audit.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/database/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/database/entity/User.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/database/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/database/repository/UserRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/alexsandrov/spring/integration/database/repository/UserRepositoryIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/alexsandrov/spring/integration/database/repository/UserRepositoryIT.java" afterDir="false" />
     </list>
@@ -75,16 +80,19 @@
       <list>
         <option value="spring-beans.schema" />
         <option value="AnnotationType" />
-        <option value="Interface" />
         <option value="Enum" />
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
         <option value="Record" />
+        <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JpbToolWindowState">
+    <option name="isToolWindowVisible" value="false" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -97,35 +105,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
-    "full.screen.before.presentation.mode": "false",
-    "last_opened_file_path": "C:/Users/mifon/IdeaProjects/spring-starter/src/test/java/org/alexsandrov/spring/integration/database/repository",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "preferences.keymap",
-    "spring.configuration.checksum": "1892c7212fc6c6eb5da4781e279930bc",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary&quot;: &quot;JUnit5&quot;,
+    &quot;com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5&quot;: &quot;&quot;,
+    &quot;full.screen.before.presentation.mode&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/mifon/IdeaProjects/spring-starter/src/test/java/org/alexsandrov/spring/integration/database/repository&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.keymap&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;1892c7212fc6c6eb5da4781e279930bc&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="org.alexsandrov.spring.database.entity" />
@@ -159,8 +167,8 @@
       <recent name="org.alexsandrov.spring.bfpp" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.UserRepositoryIT.checkProjections">
-    <configuration name="CompanyRepositoryIT" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.UserRepositoryIT.checkAuditing">
+    <configuration name="UserRepositoryIT.checkAuditing" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -173,7 +181,30 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;org.alexsandrov.spring.integration.database.repository.CompanyRepositoryIT&quot;" />
+            <option value="&quot;org.alexsandrov.spring.integration.database.repository.UserRepositoryIT.checkAuditing&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="UserRepositoryIT.checkCustomImplementation" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;org.alexsandrov.spring.integration.database.repository.UserRepositoryIT.checkCustomImplementation&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -252,29 +283,6 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="UserRepositoryIT.checkSort" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;org.alexsandrov.spring.integration.database.repository.UserRepositoryIT.checkSort&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <configuration name="Repository" type="JUnit" factoryName="JUnit">
       <module name="spring-starter.test" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
@@ -295,21 +303,21 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Gradle.CompanyRepositoryIT" />
+      <item itemvalue="Gradle.UserRepositoryIT.checkAuditing" />
+      <item itemvalue="Gradle.UserRepositoryIT.checkCustomImplementation" />
       <item itemvalue="Gradle.UserRepositoryIT.checkFirstTop" />
       <item itemvalue="Gradle.UserRepositoryIT.checkPageable" />
       <item itemvalue="Gradle.UserRepositoryIT.checkProjections" />
-      <item itemvalue="Gradle.UserRepositoryIT.checkSort" />
       <item itemvalue="JUnit.Repository" />
       <item itemvalue="Spring Boot.ApplicationRunner" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.UserRepositoryIT.checkAuditing" />
+        <item itemvalue="Gradle.UserRepositoryIT.checkCustomImplementation" />
         <item itemvalue="Gradle.UserRepositoryIT.checkProjections" />
         <item itemvalue="Gradle.UserRepositoryIT.checkFirstTop" />
         <item itemvalue="Gradle.UserRepositoryIT.checkPageable" />
-        <item itemvalue="Gradle.CompanyRepositoryIT" />
-        <item itemvalue="Gradle.UserRepositoryIT.checkSort" />
       </list>
     </recent_temporary>
   </component>
@@ -326,7 +334,8 @@
       <updated>1682844286800</updated>
       <workItem from="1682844287965" duration="54587000" />
       <workItem from="1683113141564" duration="46000" />
-      <workItem from="1683190230667" duration="40532000" />
+      <workItem from="1683190230667" duration="43631000" />
+      <workItem from="1683299802424" duration="1582000" />
     </task>
     <task id="LOCAL-00001" summary="New commit">
       <created>1682845537736</created>
@@ -440,7 +449,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683292532424</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="Projection">
+      <created>1683295227760</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1683295227760</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -473,7 +489,8 @@
     <MESSAGE value="Integration Test" />
     <MESSAGE value="JPA" />
     <MESSAGE value="Entity Graph" />
-    <option name="LAST_COMMIT_MESSAGE" value="Entity Graph" />
+    <MESSAGE value="Projection" />
+    <option name="LAST_COMMIT_MESSAGE" value="Projection" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -495,13 +512,23 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/alexsandrov/spring/integration/database/repository/UserRepositoryIT.java</url>
-          <line>38</line>
+          <line>55</line>
           <option name="timeStamp" value="46" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/alexsandrov/spring/integration/database/repository/UserRepositoryIT.java</url>
-          <line>30</line>
+          <line>47</line>
           <option name="timeStamp" value="49" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/alexsandrov/spring/integration/database/repository/UserRepositoryIT.java</url>
+          <line>41</line>
+          <option name="timeStamp" value="50" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/org/alexsandrov/spring/integration/database/repository/UserRepositoryIT.java</url>
+          <line>32</line>
+          <option name="timeStamp" value="53" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

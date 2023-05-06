@@ -6,11 +6,14 @@ import org.alexsandrov.spring.database.entity.User;
 import org.alexsandrov.spring.database.repository.UserRepository;
 import org.alexsandrov.spring.dto.PersonalInfo2;
 import org.alexsandrov.spring.dto.UserFilter;
+import org.alexsandrov.spring.integration.IntegrationTestBase;
 import org.alexsandrov.spring.integration.annotation.IntegrationTest;
 import org.junit.jupiter.api.Test;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Slice;
 import org.springframework.data.domain.Sort;
+import org.springframework.test.annotation.Commit;
+import org.springframework.test.context.jdbc.Sql;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -20,13 +23,28 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
 
-@IntegrationTest
+
 @RequiredArgsConstructor
-class UserRepositoryIT {
+class UserRepositoryIT extends IntegrationTestBase {
     private final UserRepository userRepository;
 
+    @Test
+    void checkBatch() {
+        var users = userRepository.findAll();
+        userRepository.updateCompanyAndRole(users);
+//        assertThat(users).hasSize(1);
+        System.out.println();
+    }
 
     @Test
+    void checkJdbcTemplate() {
+        var users = userRepository.findAllByCompanyIdAndRole(1, Role.USER);
+        assertThat(users).hasSize(1);
+        System.out.println();
+    }
+
+    @Test
+    @Commit
     void checkAuditing() {
         User ivan = userRepository.findById(1L).get();
         ivan.setBirthDate(ivan.getBirthDate().plusYears(1L));

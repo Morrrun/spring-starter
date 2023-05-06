@@ -26,6 +26,7 @@ logging:
     org.springframework.web: DEBUG
     root: INFO
     org.alexsandrov.spring.database.pool.ConnectionPool: info
+    org.springframework.jdbc.core: TRACE
   file:
     name: alexsandrov.log
     #рутовая директория проекта
@@ -39,12 +40,14 @@ spring:
     username: root
     password: root
   jpa:
-    properties:
-      hibernate:
-        show_sql: true
-        format_sql: true
-        hbm2ddl:
-          auto: validate
+    properties.hibernate:
+      batch_size: 50
+      fetch_size: 50
+      show_sql: true
+      format_sql: true
+      hbm2ddl:
+        auto: validate
+
 
 
 

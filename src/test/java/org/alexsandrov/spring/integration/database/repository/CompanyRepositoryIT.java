@@ -3,6 +3,7 @@ package org.alexsandrov.spring.integration.database.repository;
 import lombok.RequiredArgsConstructor;
 import org.alexsandrov.spring.database.entity.Company;
 import org.alexsandrov.spring.database.repository.CompanyRepository;
+import org.alexsandrov.spring.integration.IntegrationTestBase;
 import org.alexsandrov.spring.integration.annotation.IntegrationTest;
 import org.junit.jupiter.api.Test;
 import org.springframework.transaction.support.TransactionTemplate;
@@ -15,11 +16,10 @@ import java.util.Optional;
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
-@IntegrationTest
 @RequiredArgsConstructor
 //@Transactional
 //@Commit
-class CompanyRepositoryIT {
+class CompanyRepositoryIT extends IntegrationTestBase {
     public static final Integer APPLE_ID = 6;
     private final EntityManager entityManager;
     private final TransactionTemplate transactionTemplate;

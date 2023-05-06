@@ -4,6 +4,7 @@ plugins {
     id 'io.freefair.lombok' version '8.0.1'
     id 'java'
 }
+apply from: 'versions.gradle'
 
 group 'org.alexsandrov'
 version '1.0-SNAPSHOT'
@@ -14,9 +15,13 @@ repositories {
 
 dependencies {
     implementation 'org.springframework.boot:spring-boot-starter'
-    implementation 'org.springframework.boot:spring-boot-starter-test:'
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa:'
+    implementation 'org.springframework.data:spring-data-envers:'
     implementation 'org.postgresql:postgresql'
+    implementation 'org.liquibase:liquibase-core:'
+
+    testImplementation 'org.springframework.boot:spring-boot-starter-test:'
+    testImplementation "org.testcontainers:postgresql:${versions.testcontainers}"
 
 }
 

@@ -4,22 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbd7b7be-e2dc-4f52-8525-91310c846cd9" name="Changes" comment="Auditing">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/alexsandrov.log.2023-05-05.0.gz" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/database/entity/Revision.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-master.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/alexsandrov/spring/integration/IntegrationTestBase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/versions.gradle" afterDir="false" />
+    <list default="true" id="bbd7b7be-e2dc-4f52-8525-91310c846cd9" name="Changes" comment="Database Migration">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/config/AuditConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/config/AuditConfiguration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/database/entity/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/database/entity/User.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/database/repository/UserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/database/repository/UserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/database/repository/custom/FilterUserRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/database/repository/custom/FilterUserRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/database/repository/custom/FilterUserRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/database/repository/custom/FilterUserRepositoryImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/database/entity/AuditingEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/alexsandrov/spring/database/entity/AuditingEntity.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/sql/data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-1.0.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-1.0.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-master.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-master.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/audit.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-2.1.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/sql/init.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/changelog/db.changelog-2.0.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/alexsandrov/spring/integration/database/repository/CompanyRepositoryIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/alexsandrov/spring/integration/database/repository/CompanyRepositoryIT.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/org/alexsandrov/spring/integration/database/repository/UserRepositoryIT.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/alexsandrov/spring/integration/database/repository/UserRepositoryIT.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/resources/application-test.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/resources/application-test.yml" afterDir="false" />
@@ -127,7 +119,7 @@
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
     "full.screen.before.presentation.mode": "false",
-    "last_opened_file_path": "C:/Users/mifon/IdeaProjects/spring-starter/src/test/resources",
+    "last_opened_file_path": "C:/Users/mifon/IdeaProjects/spring-starter/src/main/resources/db/changelog",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -151,6 +143,7 @@
       <recent name="org.alexsandrov.spring.database.pool" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\mifon\IdeaProjects\spring-starter\src\main\resources\db\changelog" />
       <recent name="C:\Users\mifon\IdeaProjects\spring-starter\src\test\resources" />
       <recent name="C:\Users\mifon\IdeaProjects\spring-starter\src\main\resources\sql" />
       <recent name="C:\Users\mifon\IdeaProjects\spring-starter\src\main\resources" />
@@ -175,7 +168,7 @@
       <recent name="org.alexsandrov.spring.bfpp" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.UserRepositoryIT.checkBatch">
+  <component name="RunManager" selected="JUnit.Repository">
     <configuration name="UserRepositoryIT" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -343,7 +336,7 @@
       <workItem from="1682844287965" duration="54587000" />
       <workItem from="1683113141564" duration="46000" />
       <workItem from="1683190230667" duration="43631000" />
-      <workItem from="1683299802424" duration="14197000" />
+      <workItem from="1683299802424" duration="16296000" />
     </task>
     <task id="LOCAL-00001" summary="New commit">
       <created>1682845537736</created>
@@ -471,7 +464,14 @@
       <option name="project" value="LOCAL" />
       <updated>1683306495728</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Database Migration">
+      <created>1683378062636</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1683378062636</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -506,7 +506,8 @@
     <MESSAGE value="Entity Graph" />
     <MESSAGE value="Projection" />
     <MESSAGE value="Auditing" />
-    <option name="LAST_COMMIT_MESSAGE" value="Auditing" />
+    <MESSAGE value="Database Migration" />
+    <option name="LAST_COMMIT_MESSAGE" value="Database Migration" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -528,32 +529,32 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/alexsandrov/spring/integration/database/repository/UserRepositoryIT.java</url>
-          <line>73</line>
+          <line>71</line>
           <option name="timeStamp" value="46" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/alexsandrov/spring/integration/database/repository/UserRepositoryIT.java</url>
-          <line>65</line>
+          <line>63</line>
           <option name="timeStamp" value="49" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/alexsandrov/spring/integration/database/repository/UserRepositoryIT.java</url>
-          <line>59</line>
+          <line>57</line>
           <option name="timeStamp" value="50" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/alexsandrov/spring/integration/database/repository/UserRepositoryIT.java</url>
-          <line>49</line>
+          <line>47</line>
           <option name="timeStamp" value="54" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/alexsandrov/spring/integration/database/repository/UserRepositoryIT.java</url>
-          <line>35</line>
+          <line>33</line>
           <option name="timeStamp" value="56" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/org/alexsandrov/spring/integration/database/repository/UserRepositoryIT.java</url>
-          <line>40</line>
+          <line>38</line>
           <option name="timeStamp" value="57" />
         </line-breakpoint>
       </breakpoints>

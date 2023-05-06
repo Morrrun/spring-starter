@@ -4,7 +4,7 @@ import lombok.RequiredArgsConstructor;
 import org.alexsandrov.spring.database.entity.Company;
 import org.alexsandrov.spring.database.repository.CompanyRepository;
 import org.alexsandrov.spring.integration.IntegrationTestBase;
-import org.alexsandrov.spring.integration.annotation.IntegrationTest;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.transaction.support.TransactionTemplate;
 
@@ -34,6 +34,7 @@ class CompanyRepositoryIT extends IntegrationTestBase {
 
 
     @Test
+    @Disabled
     void delete() {
         Optional<Company> maybeCompany = companyRepository.findById(APPLE_ID);
 

@@ -20,7 +20,7 @@ import java.time.Instant;
 public abstract class AuditingEntity<T extends Serializable> implements BaseEntity<T> {
 
     @CreatedDate
-    private Instant createAt;
+    private Instant createdAt;
     @LastModifiedDate
     private Instant modifiedAt;
     @CreatedBy

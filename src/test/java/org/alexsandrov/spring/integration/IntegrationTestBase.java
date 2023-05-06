@@ -7,7 +7,7 @@ import org.springframework.test.context.DynamicPropertySource;
 import org.springframework.test.context.jdbc.Sql;
 import org.testcontainers.containers.PostgreSQLContainer;
 
-@Sql("classpath:sql/data.sql")
+@Sql({"classpath:sql/data.sql"})
 @IntegrationTest
 public abstract class IntegrationTestBase {
     private static final PostgreSQLContainer<?> container =

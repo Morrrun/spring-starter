@@ -7,13 +7,11 @@ import org.alexsandrov.spring.database.repository.UserRepository;
 import org.alexsandrov.spring.dto.PersonalInfo2;
 import org.alexsandrov.spring.dto.UserFilter;
 import org.alexsandrov.spring.integration.IntegrationTestBase;
-import org.alexsandrov.spring.integration.annotation.IntegrationTest;
 import org.junit.jupiter.api.Test;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Slice;
 import org.springframework.data.domain.Sort;
 import org.springframework.test.annotation.Commit;
-import org.springframework.test.context.jdbc.Sql;
 
 import java.time.LocalDate;
 import java.util.List;

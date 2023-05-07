@@ -1,7 +1,6 @@
 package org.alexsandrov.spring.integration.service;
 
 import lombok.RequiredArgsConstructor;
-import org.alexsandrov.spring.ApplicationRunner;
 import org.alexsandrov.spring.config.DatabaseProperties;
 import org.alexsandrov.spring.dto.CompanyReadDto;
 import org.alexsandrov.spring.integration.annotation.IntegrationTest;
@@ -30,7 +29,7 @@ class CompanyServiceIT {
 
         assertTrue(actualResult.isPresent());
 
-        var expectedResult = new CompanyReadDto(COMPANY_ID);
+        var expectedResult = new CompanyReadDto(COMPANY_ID, "Google");
         actualResult.ifPresent(actual -> assertEquals(expectedResult, actual));
     }
 
